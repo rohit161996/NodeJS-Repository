@@ -2,6 +2,12 @@
 - npm init
 - It makes the file package.json
 
+## Install the dependencies
+- npm install 
+    or
+- npm i 
+- The above commands will help to install the dependencies of the project.
+
 ## Project Creation
 - Create the src/ directory
 - Create app.js file in it.
@@ -103,6 +109,7 @@ app.get("/",(req, res) => {
 
 ## GET Flow:-
 ### We get the data from the server in the GET Method.
+```text
 [ BROWSER ]
    |
    |  User types `http://localhost:3000/hello`
@@ -128,9 +135,11 @@ app.get("/",(req, res) => {
    |   "Hello Rohit Ramchandani!!"
    v
 [ BROWSER DISPLAYS THE TEXT ]
+```
 
 ## POST Flow:-
 ### We post the data to the server using the POST Method.
+```text
 [ BROWSER or CLIENT (e.g., Postman, HTML form) ]
    |
    |-- User submits form or sends JSON to:
@@ -162,6 +171,7 @@ app.get("/",(req, res) => {
    |   "Login Successful"
    v
 [ CLIENT DISPLAYS THE RESPONSE ]
+```
 
 ## Why is the -g used in the command to install?
 - To install the package globally on the system.

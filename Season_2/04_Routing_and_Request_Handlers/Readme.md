@@ -30,37 +30,36 @@
      - With it, you always get the known-working version.
 
 ## Working of the app.use().
-- If the route of the URL matches the /text in the app.use() like
+- If the route of the URL matches the text -> /test in the app.use() like
   - http://localhost:3000/test/
   - http://localhost:3000/test/hello/1234
   - It will go to the 
     ```js
     app.use("/test", (req, res)=>{
-      res("Hello from the test");
+        res("Hello from the test");
     })
     ```
 
-- But this will not work 
-- http://localhost:3000/test1234
+- But http://localhost:3000/test1234 will not work 
 
-- But if 
+- But if below code is there 
     ```js
     app.use("/", (req, res)=>{
       res("Hello from the test");
     })
     ```
-  this is there then no other route will work since, this will be the only one which works.
+  then no other route will work since, use only considers the prefix matching of the routes and / will match all the routes.
 
-- If we write the code afterwards will the "/" affect the code the same way
+- If we write the other route handlers after the route handlers with "/" as URL, all the other codes will work fine.
   ```js
   app.use("/", (req, res)=>{
     res("Hello from the test");
   })
   ```
-## YESSSSS, the hello, test etc. will work fine.
+
 ## NOTE:
 - Order of the routes is very very important.
-- If we give anything after "/" which does not match the routes it will map to "/".
+- If we write any route handlers after the route handlers with "/" which does not match the routes it will map to "/".
 
 ## HTTP Methods:-
 - GET, POST, PATCH, DELETE are the HTTP Methods.
