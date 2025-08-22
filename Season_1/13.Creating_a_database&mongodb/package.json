@@ -1,0 +1,14 @@
+{
+  "name": "mongodb_handson",
+  "version": "1.0.0",
+  "description": "- MongoDB is a NoSQL database and it is a document database.\r - It is a document oriented database program.\r - It means the data is stored in the Collections in the form of Documents.\r - Collections -> Documents -> Deals",
+  "main": "database.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mongodb": "^6.18.0"
+  }
+}
