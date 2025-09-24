@@ -62,7 +62,13 @@
 
 - To give the custom name to our application
 ```cmd
-    pm2 start npm --name "devTinder-Backend" -- start
+    pm2 start npm --name "devTinder-Backend" -- start 
+```
+
+- THIS IS THE CORRECT COMMAND
+```cmd
+    cd devTinder-Backend
+    pm2 start src/app.js --name devtinder-backend
 ```
 
 ## Mismatch between the IPs of the Frontend and the Backend
