@@ -1,12 +1,17 @@
 # Episode 7 - Payment Gateway Integration, ft. Razorpay
 - These things should be done very securely.
 
+## Premium Features
+- Add Blue Tick for the User.
+- Do not limit the number of requests sent.
+
+
 ## Payment Steps:
 - The connection to the Payment Gateway is made only through the Backend.
 - Backend has the secret key which acts as a password to connect the the Razorpay.
 - Razorpay is a very famous Payment Gateway provider.
 
-# Workflow of the payment page
+## Workflow of the payment page
 ### Step 1.
 - The user clicks the `Pay Now` Button
 - The frontend will call an API `/createOrder` to create the order.
@@ -167,7 +172,7 @@ paymentRouter.post(
     "/payment/webhook",
     async (req, res) => {
         try {
-            const webhookSignature = req.get["X-Razorpay-Signature"];
+            const webhookSignature = req.get("X-Razorpay-Signature");
 
             /* This is the main line which will validate the web hook signature */
             const isWebHookValid = validateWebhookSignature(
@@ -273,7 +278,53 @@ paymentRouter.post(
 - The User Schema will also be updated now, to update the user type as premium.
 - Store the details like isPremium, membershipType in the User Schema.
 
-## Premium Features
-- Add Blue Tick for the User.
-- Do not limit the number of requests sent.
+## Testing the Payment Integration:
+- To test the payment integration we need to deploy the application.
+- This cannot be tested in the localhost environment.
 
+## Update the .env file in the AWS
+- Update the env file.
+
+## Redeploy Backend
+```git
+   ssh -i "devTinder-secret.pem" ubuntu@ec2-54-196-145-100.compute-1.amazonaws.com
+   cd devTinder_Backend/
+   git pull
+   pm2 list
+   pm2 restart 0
+```
+
+## Redeploy Frontend
+```git
+   ssh -i "devTinder-secret.pem" ubuntu@ec2-54-196-145-100.compute-1.amazonaws.com
+   cd devTinder_Frontend/
+   git pull
+   npm run build
+   sudo scp -r dist/* /var/www/html
+```
+
+## Check the database
+- Now check the database to validate that the payment is saved or not.
+
+## 3. Payment Verification API
+- Now we will write the API to get the user status as `Premium` or `Non-Premium`.
+```js
+paymentRouter.get(
+    "/premium/verify",
+    userAuth,
+    async (req, res) => {
+        const user = req.user;
+        if (user.isPremium) {
+            return res.json({ isPremium: true });
+        }
+
+        return res.json({ isPremium: false });
+    }
+);
+```
+- We should call the API to test that the user is premium or not after the payment is validated.
+- For this razorpay gives us a handler function.
+![alt text](image-1.png)
+
+- Now we will add the handler function in the `<Premium/>` Component.
+- Then add the verifyMembership function to the `<Premium/>` Component.
