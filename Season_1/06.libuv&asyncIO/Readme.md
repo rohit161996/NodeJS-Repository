@@ -38,7 +38,7 @@
 
 ## Conclusion :-
 ### Javascript is synchronous but the NodeJS can execute in the asynchronous manner.
-![Synchronous and Asynchronous Code](images/sync_async.png)
+<img src = "images/sync_async.png" width=750 height=450>
 
 - Javascript code does not like the Asynchronous code.
 - Javascript code which is synchronous can execute very quickly.
@@ -50,7 +50,7 @@
   2. Memory Heap
   3. Garbage Collector
 
-![Function](images/function.png)
+<img src="images/function.png" width=750 height=450>
 
 #### Code
 - Whole code is running on the single thread (Call Stack)
@@ -63,12 +63,12 @@
 ### NOTE:-
 - Time, Tide and Javascript waits for None.
 
-![Asynchronous Code](images/async.png)
+<img src="images/async.png" width=750 height=450>
 
 - Javascript engine does not wait for the some seconds etc.
 - NodeJS gives the capability to the Javascript code to execute after some time.
 
-![NodeJS](images/NodeJS.png)
+<img src="images/NodeJS.png" width=750 height=450>
 
 - Javascript engine with the help of the **libuv** connect with the Operating System.
 
@@ -78,15 +78,15 @@
 - Timer, threadpool and eventloop is present in the libuv.
 - NodeJS -> libuv repository -> https://github.com/nodejs/node/tree/main/deps/uv
 
-![NodeJS](images/libuv.png)
+<img src="images/libuv.png" width=750 height=450>
 
 - All the asynchronous tasks such as the api calls, timer tasks, and the file operations are done by the libuv for the Javascript v8 Engine.
 
 
-![Sync and Async Code](images/sync_async_code.png)
+<img src="images/sync_async_code.png" width=750 height=450>
 
 - Synchronous code is handled by the JavaScript engine and the Asynchronous code is handled by the libuv.
-![Sync and Async Code](images/sync_async_code1.png)
+<img src="images/sync_async_code1.png" width=750 height=450>
 
 - NodeJS is asynchronous but v8 engine is synchronous which is because of the libuv.
 - This is why we say that NodeJS can do asynchronous IO.
