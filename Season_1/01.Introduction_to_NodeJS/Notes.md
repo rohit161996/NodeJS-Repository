@@ -1,8 +1,8 @@
 # Namaste Node.js - Episode 1 Summary
+> "Any application that can be written in JavaScript will eventually be written in JavaScript."
+> - Jeff Atwood, 2007 (Founder StackOverflow)
 
-"Any application that can be written in JavaScript will eventually be written in JavaScript."
-                                                                        - Jeff Atwood, 2007
-                                                                        - Founder StackOverflow
+---
 
 ## Chapter 01: Introduction to Node.js  
 
@@ -10,6 +10,8 @@
 - Node.js is a JavaScript runtime environment built on Chrome's V8 engine, "Run Javascript Everywhere".
 - It allows JavaScript to run outside the browser, making it a powerful tool for various applications beyond web development.  
 - It is a cross-platform, open-source Javascript runtime environment that can run on Windows, Linux, Unix, macOs and more.
+
+---
 
 ### 2. Key Features of Node.js  
 #### a) Runtime Environment  
@@ -21,8 +23,10 @@
 - This design allows it to manage multiple tasks without waiting for one to complete before starting another.  
 
 #### c) Asynchronous I/O [Non-blocking I/O]
-- Node.js performs asynchronous I/O operations, meaning tasks like reading/writing files or making network requests do not block the execution of other operations.  
-- This is different from traditional synchronous programming, where tasks are executed sequentially.  
+- Node.js performs asynchronous I/O operations, meaning tasks like reading/writing files or making network requests which does not block the execution of other operations.
+- This is different from traditional synchronous programming, where tasks are executed sequentially.
+
+---
 
 ### 3. Development History of Node.js  
 #### a) Creation and Early Development  
@@ -36,14 +40,20 @@
 - Joyent was working on a similar project
 - Joyent, a technology company, saw potential in Node.js and supported its development.  
 
+---
+
 ### 4. Comparison with Traditional Servers  
 - Before Node.js, most web servers used the Apache HTTP Server, which followed a blocking I/O model, limiting the number of concurrent connections.  
 - Node.js introduced a non-blocking I/O model, allowing it to handle multiple requests efficiently with fewer system resources.  
+
+---
 
 ### 5. The Evolution of NPM (Node Package Manager)  
 - NPM is a package manager for Node.js, allowing developers to install and manage libraries easily.  
 - Developed by Joyent in 2010, it was initially available for macOS and Linux.  
 - In 2011, Microsoft collaborated to bring NPM to Windows.  
+
+---
 
 ### 6. Leadership and Community Transitions  
 #### a) Leadership Changes  
@@ -56,6 +66,10 @@
 #### c) Formation of the OpenJS Foundation  
 - By 2019, the JS Foundation and Node.js Foundation merged, forming the OpenJS Foundation, ensuring long-term community-driven development.  
 
+---
+
 ### 7. Present and Future of Node.js  
 - Node.js continues to evolve with strong community support, making it one of the most popular JavaScript runtimes.  
 - Its ecosystem, powered by NPM, provides a vast collection of libraries for building scalable and efficient applications.
+
+---
