@@ -2,12 +2,23 @@
 
 ## Project Lifecycle:-
 - Waterfall Model (Software Development Life Cycle)
-  1. Requirements   -> Product/Project Manager Decide the requirements of the project along with the Designers.
-  2. Design         -> Design Documentation of the Project is created -> By Senior Engineer/Engineering Manager.
-  3. Development    -> SDE 1, SDE 2 are involved -> Writing Unit and Integration Tests is responsibility of the Developers
-  4. Testing        -> SDE Testing -> SDET Test the application
-  5. Deployment     -> DevOps Engineer Take Care of the Deployment, Servers etc.
-  6. Maintainance   -> All the Steps from 1 to 5 is done again.
+  1. `Requirements`   
+     - Product/Project Manager Decide the requirements of the project along with the Designers.
+
+  2. `Design`
+     - Design Documentation of the Project is created -> By Senior Engineer/Engineering Manager.
+
+  3. `Development`
+     - SDE 1, SDE 2 are involved -> Writing Unit and Integration Tests is responsibility of the Developers
+
+  4. `Testing`
+     - SDE Testing -> SDET Test the application
+
+  5. `Deployment`
+     - DevOps Engineer Take Care of the Deployment, Servers etc.
+
+  6. `Maintainance`
+     - All the Steps from 1 to 5 is done again.
 
 - All the things in the startup is done by 3-4 people.
 
