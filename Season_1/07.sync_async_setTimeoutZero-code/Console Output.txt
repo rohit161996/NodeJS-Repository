@@ -1,0 +1,7 @@
+Console Output :
+
+Hello World
+Multiplication result is :  22637556228
+File Data Hello from the gossip.txt
+Fetched Data Successfully
+setTimeout after 5 seconds
