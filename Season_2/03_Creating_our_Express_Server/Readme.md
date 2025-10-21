@@ -1,15 +1,22 @@
+# Creating our Express Server
 ## Create a Project
-- npm init
+```cmd
+  npm init
+```
 - It makes the file package.json
 
 ## Install the dependencies
-- npm install 
+```cmd
+  npm install
+
     or
-- npm i 
-- The above commands will help to install the dependencies of the project.
+
+  npm i
+```
+- The above commands will help to install the dependencies of the project which are mentioned in the `package.json`.
 
 ## Project Creation
-- Create the src/ directory
+  - Create the src/ directory
 - Create app.js file in it.
 - It is the main Javascript file to write the Javascript Code
 
